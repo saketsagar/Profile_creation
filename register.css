@@ -1,0 +1,117 @@
+.error {
+  color: red;
+  }
+.error1 {
+  color: red;
+  }
+
+body {
+font-family: 'Nunito', sans-serif;
+color: #384047;
+background-color: #0F2027;
+/* background: #bdc3c7;  /* fallback for old browsers
+background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6
+background: linear-gradient(to right, #2c3e50, #bdc3c7); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/*background: #0F2027;  /* fallback for old browsers
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+form {
+max-width: 397px;
+margin: 1px auto;
+
+padding: 9px 14px;
+background:#0F2027 ;
+border-radius: 8px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h2 {
+margin: 25px 0 25px 0;
+text-align: center;
+color:whitesmoke;
+font-size: xx-large;
+font-weight: 100;
+font-family: 'Nunito',sans-serif;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea {
+background: rgba(255,255,255,0.1);
+border: none;
+font-size: 11px;
+height: 25px;
+margin: 0;
+outline: 0;
+padding: 14px;
+width: 100%;
+background-color:transparent;
+color: #8a97a0;
+box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+margin-bottom: 30px;
+}
+
+textarea:focus, input:focus {
+/* border-color: transparent !important; */
+
+border-width: 3px;
+border-style: solid;
+border-image:
+linear-gradient(
+to right,
+green,
+rgba(0, 0, 0, 0)
+) 1 100%;
+
+}
+
+button#submitform,button#go_back {
+align-items: center;
+padding: 13px 17px 13px 17px;
+color: #FFF;
+background-color: #4bc970;
+font-size: 13px;
+text-align: center;
+font-style: normal;
+border-radius: 5px;
+width: 45%;
+border:none;
+outline:none;
+box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+margin-bottom: 10px;
+margin-left: 13px;
+cursor: pointer;
+}
+
+button#go_back {
+background-color: #0079be;
+}
+
+button#go_back:hover{
+background-color:#0078becc ;
+}
+button#submitform:hover{
+background-color:#4bc971d2;
+}
+
+label {
+display: block;
+margin-bottom: 8px;
+}
+
+label.light {
+font-weight: 300;
+display: inline;
+}
+
+@media screen and (min-width: 480px) {
+
+form {
+  max-width: 397px;
+}
+}
