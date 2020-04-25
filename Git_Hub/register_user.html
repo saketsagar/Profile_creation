@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <!-- <link href="fonts/googleapis.css" rel="stylesheet"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Register User</title>
+        <script src="script/libraries/angular.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles/nunito.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link rel="stylesheet"  href="styles/icon.css">
+        <link rel="stylesheet"  href="register.css">
+        <link href="styles/gfonts.css" rel="stylesheet">
+        <script src="register.js"></script>
+
+  </head>
+  <body  ng-app="registration" ng-controller="registrationCtrl">
+    <div style="padding-top: 10px;">
+    <a href="Login_v3/index.html"  class="btn btn-warning" style="width: 84px;float:right">Logout</a>
+    </div>
+    <br><br>
+    <div class="main">
+      <h2>User Registration</h2>
+      <form method="POST" name="requestAuth" autocomplete="on">
+
+            <!-- <label for="eid"> Employee ID</label> -->
+            <input type="number" class="form-control" ng-model="user.id" id="inputeid" name="eid" placeholder="ID" required>
+            <br>
+            <!-- <label for="name">Name</label> -->
+            <input type="text" class="form-control" ng-model="user.name" id="inputname" name="name" placeholder="Name" required>
+
+            <!-- <label for="inputpass">Password</label> -->
+            <input type="Password" class="form-control" ng-model="user.pass" id="inputpass" name="pass" placeholder="Password" required>
+
+            <!-- <span style="color: #8a97a0;">Enter a password longer than 8 characters</span> -->
+
+            <!-- <label for="confirmpass">Confirm Password</label> -->
+            <input type="Password" class="form-control"  ng-model="user.cpass" id="inputcpass" name="cpass" placeholder="Confirm Password" required>
+
+            <!-- <label for="email">E-mail ID</label> -->
+            <ng-form name="myform">
+              <input type="text" ng-pattern="word" name="email" placeholder="xyz@gmail.com" ng-model="user.email" required>
+
+              <span class="error1" ng-show="myform.email.$error.pattern">Please match pattern xyz@gmail.com</span>
+          </ng-form>
+            <ng-form name="myForm">
+            <input type="number" placeholder="+91-636-78658" name="phone" ng-pattern="phoneNumbr" ng-model="user.phone" required>
+            <br>
+            <span class="error" ng-show="myForm.phone.$error.minlength">Phone no not less that 10 char.</span>
+            <span class="error" ng-show="myForm.phone.$error.maxlength">Phone no not more than 11 char.</span>
+            <br><span class="error" ng-show="myForm.phone.$error.pattern">Please match pattern [+91-036-78658 || 91-036-78658]</span>
+          </ng-form>
+            <!-- <label for="inputphone">Phone Number</label> -->
+
+
+            <div class="mb-3">
+              <!-- <label for="validationTextarea">Skills</label> -->
+              <textarea class="form-control " style="height:30px;padding-top:2px" ng-model="user.skills" id="validationTextarea" name="skills" placeholder="Type your Skills" required></textarea>
+            </div>
+
+            <!-- <label for="designation">Designation</label> -->
+            <input type="text" class="form-control" ng-model="user.designation" id="inputdesignation" name="designation" placeholder="Designation" required>
+
+
+            <button type="button" class="goback" ng-click="redirect()" id="go_back">Go to Dashboard</button>
+            <button type="submit" ng-click="registerUser()" class="submit" id="submitform">Submit</button>
+          </form>
+        </div>
+
+    </body>
+</html>
